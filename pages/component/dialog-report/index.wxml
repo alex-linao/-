@@ -1,0 +1,7 @@
+<dialog title="举报原因" show="{{show}}" confirmDisabled='{{confirmDisabled}}' bind:onSubmit="onSubmit" confirmButtonLoading="{{loading}}" showCancelButton='{{showCancelButton}}'>
+  <view class='report-content'>
+    <view wx:for="{{reasons}}" wx:key="{{item.reason}}" class='report-item {{reason == item.reason ? "chosen":""}}' data-reason='{{item.reason}}' catchtap='chosenReport'>{{ item.name }}</view>
+  </view>
+</dialog>
+
+<toast title="{{toast}}" id="toast"></toast>

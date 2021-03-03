@@ -1,0 +1,5 @@
+<view class="loading custom-class" style="width: {{ size }}; height: {{ size }}">
+  <view class="loading__spinner loading__spinner--spinner">
+    <view wx:for="{{12}}" wx:key="index" class="loading__dot dot_{{index}}"></view>
+  </view>
+</view>

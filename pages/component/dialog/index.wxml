@@ -1,0 +1,15 @@
+<view hidden='{{ !show }}'>
+  <view class='mask'></view>
+
+  <view class='dialog'>
+    <view class='header' wx:if="{{ title }}">{{ title }}</view>
+    <slot></slot>
+    <view class='footer border_top'>
+      <view class='item cancel' wx:if='{{showCancelButton}}' catchtap='onCancel' hover-class='btn-hover'>{{ cancelButtonText }}</view>
+      <view class='item confirm {{confirmDisabled ? "disabled":""}}' wx:if='{{showConfirmButton}}' catchtap="onSubmit" hover-class='btn-hover'>
+        <spinner wx:if='{{confirmButtonLoading}}' style="padding-right: 10rpx;"></spinner>
+        <text>{{ confirmButtonText }}</text>
+      </view>
+    </view>
+  </view>
+</view>

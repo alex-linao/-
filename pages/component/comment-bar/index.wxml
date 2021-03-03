@@ -1,0 +1,39 @@
+<view class="wrapper">
+  <view class="mask" bindtap="onClick"></view>
+
+  <view 
+    class="comment-bar border_top"
+    style="bottom: {{ positionBottom }}px"
+  >
+    <view class="info">
+      <view class="name">评论 {{to}}</view>
+      <view class="size" bindtap="setCommentSize"><text class="iconfont icon-to-{{ isMax ? 'min' : 'max' }}"></text></view>
+    </view>
+
+    <view class='toolbar'>
+      <view class='virtual_input_wrapper'>
+        <!-- 虚拟输入框 -->
+        <textarea 
+          style="height: {{ inputHeight }}rpx"
+          class='virtual_input' 
+          fixed 
+          hold-keyboard
+          maxlength="1024"  
+          adjust-position="{{ false }}"
+          show-confirm-bar="{{ false }}" 
+          placeholder='{{ placeholder }}'
+          catchtap='virtualInputTap' 
+          bindkeyboardheightchange="keyboardHeightChangeHandle" 
+          bindlinechange="lineChangeHandle"
+          bindinput="inputChangeHandle"
+        ></textarea>
+      </view>
+      <view class='tool-bar'>
+        <view>{{ wordCount }}/1024</view>
+        
+        <view wx:if="{{ !submiting }}" class="submit" bindtap="submitHandle">发布</view>
+        <view wx:else class="submit"><m-spinner></m-spinner></view>
+      </view>
+    </view>
+  </view>
+</view>

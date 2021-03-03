@@ -1,0 +1,15 @@
+<view class="my_title">
+    <navigator class="logo">
+        <!-- <image class="logo_img" style="width:140rpx;height:60rpx;" src="../../icons/logo1.png"></image> -->
+    </navigator>
+    <view class="search_icon">
+        <!-- <image style="width:60rpx;height:44rpx;" src="../../icons/search1.png"></image> -->
+    </view>
+    <view class="user_icon">
+        <!-- <image style="width:54rpx;height:60rpx;" src="../../icons/user1.png"></image> -->
+    </view>
+    <view class="down_app">
+      
+    </view>
+    我是导航栏
+</view>

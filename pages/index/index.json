@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"星辰影院",
+  "usingComponents":{
+    "MyTitle":"../../components/MyTitle/MyTitle"
+  }
+}

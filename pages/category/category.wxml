@@ -1,0 +1,68 @@
+<import src="/pages/component/movie-item/movie-item.wxml" />
+
+<!-- 菜单 -->
+<view class='nav-wrapper'>
+  <block wx:for="{{menus}}" wx:key="{{index}}">
+    <scroll-view class="nav" scroll-x="true">
+      <view wx:for="{{item.list}}" wx:for-item="nav" wx:key="{{index}}" class="{{nav == activeMenu[item.type] ? 'chosen': ''}}" data-word="{{nav}}" data-type="{{item.type}}" catchtap="ontapMenuHandle">{{nav}}</view>
+    </scroll-view>
+  </block>
+</view>
+<!-- 菜单 END -->
+
+<view class="fixed-nav">
+  <view class="nav-list">
+    <view class="item {{ index == 0 ? 'is-active' : '' }}" data-index="0" data-sortby="hot" data-order="desc" bindtap="sortReview">最热</view>
+    <view class="item {{ index == 1 ? 'is-active' : '' }}" data-index="1" data-sortby="date" data-order="desc" bindtap="sortReview">最新</view>
+    <view class="item {{ index == 2 ? 'is-active' : '' }}" data-index="2" data-sortby="date" data-order="asc" bindtap="sortReview">最早</view>
+
+    <view class="active-block" style="left: {{ navLeft }}rpx"></view>
+  </view>
+
+  <view>
+    <text class="iconfont icon-arrow-down"></text>
+  </view>
+</view>
+
+<!-- 影视列表 -->
+<view class="movie-wrapper {{ movies.length ? '_opaque': '_transparent' }}">
+  <block wx:for="{{videoinfo}}" wx:key="{{item.id}}">
+    <view class='movie-item' data-type='movie' data-id="{{item.vod_id}}" data-bgcolor="{{bgcolor}}" data-poster="{{poster}}"
+      catchtap='navigateTo'>
+  
+      <view class='movie-poster'>
+        <image class='poster' mode='aspectFill' lazy-load="true" src="{{item.vod_pic}}" />
+  
+        <view class='movie-info'>
+          <text class='episode' wx:if="{{item.vod_remarks.length < 4}}">{{item.vod_remarks}}</text>
+          <text class='episode' wx:else>HD</text>
+
+          <text class='rating' wx:if="{{item.vod_score > 0}}">{{item.vod_score}}</text>
+          <text class='rating' wx:else>暂无评分</text>
+        </view>
+      </view>
+  
+      <view class='movie-title'>{{item.vod_name}}</view>
+    </view>
+  </block>
+  </view>
+<!-- 影视列表 END -->
+
+
+
+<!-- 加载动画 -->
+<!-- <view class='spinner' hidden="{{!loading}}" style="{{movies.length === 0 ? 'line-height: calc(100vh - 450rpx)':''}}">
+  <view class='item'><view class='rect rect1'></view></view>
+  <view class='item'><view class='rect rect2'></view></view>
+  <view class='item'><view class='rect rect3'></view></view>
+</view> -->
+
+
+<!-- 未找到数据 -->
+<!-- <view class="no-data" style="display: {{nodata ? 'block': 'none'}}">
+  <image class='nodata-icon' src='/images/no-data.png'></image>
+  <view>
+    <text>没有找到任何相关影视</text>
+  </view>
+</view> -->
+<!-- 未找到数据 END -->

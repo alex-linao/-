@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dialog": "/pages/component/dialog/index",
+    "toast": "/pages/component/toast/toast"
+  }
+}

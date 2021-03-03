@@ -1,0 +1,94 @@
+@import '/static/iconfont/iconfont.wxss';
+
+.rate-item {
+  margin: 0 12rpx;
+	display: inline-block;
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.all {
+  color: #c8c8c8;
+}
+.icon-save {
+	width: 100rpx;
+	height: 100rpx;
+	font-size: 100rpx;
+}
+.half{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50rpx;
+  overflow: hidden;
+  color: #c8c8c8;
+}
+
+.title {
+  color: #c8c8c8;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.check {
+  color: #fea54c;
+}
+
+.rate-inner {
+  display: inline-block;
+  transform: scale(.4);
+}
+
+.rate-star {
+  display: inline-block;
+  color: #c8c8c8;
+}
+
+.scale_0 {
+  animation: scale .4s ease-in-out .3s 1 forwards;
+}
+.scale_1 {
+  animation: scale .4s ease-in-out .35s 1 forwards;
+}
+.scale_2 {
+  animation: scale .4s ease-in-out .4s 1 forwards;
+}
+.scale_3 {
+  animation: scale .4s ease-in-out .45s 1 forwards;
+}
+.scale_4 {
+  animation: scale .4s ease-in-out .5s 1 forwards;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(.4);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.actived {
+  animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  60% {
+    bottom: 20rpx;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}

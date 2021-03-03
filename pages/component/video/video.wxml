@@ -1,0 +1,9 @@
+<template name="videoTpl">
+  <view class='s_poster_wrapper'>
+    <view class='s_shadow' wx:if="{{playIdx === index}}">
+      <text>播放中</text>
+    </view>
+    <image mode='aspectFill' class='s_poster' lazy-load src='{{cover}}'></image>
+    <view class='s_duration'>{{minute}}</view>
+  </view>
+</template>

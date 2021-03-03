@@ -1,0 +1,7 @@
+<view hidden='{{!show}}'>
+  <view class='_shade' catchtap='onCancel'></view>
+  <view class='_tool'>
+    <view wx:for="{{ actions }}" wx:key="{{index}}" data-index="{{ index }}" class='_item' catchtap='onSelect' hover-class='btn-hover'>{{ item.name }}</view>
+    <view class='_item cancel' catchtap='onCancel' hover-class='btn-hover'>取消</view>
+  </view>
+</view>

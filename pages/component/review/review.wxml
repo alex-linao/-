@@ -1,0 +1,31 @@
+<template name="reviewTpl">
+
+  <view class='review' data-id='{{id}}' data-type="review" catchtap='navigateTo'>
+    <view class='r-header'>
+      <view class='r-title ellipsis'>{{title}}</view>
+      
+    </view>
+
+    <view class="author">
+      <view>
+        <image class="avatar" src="{{author.avatar}}"></image>
+        <text class="username">{{ author.username }}</text>
+      </view>
+
+      <!-- /评分 -->
+      <view>
+        <m-rate wx:if="{{rating}}" value="{{rating/2}}" allow-half readonly size="{{30}}"></m-rate>
+        <view wx:else class='_stars_null'>用户未评分</view>
+      </view>
+    </view>
+
+    <view class='r-brief'>
+      <text>{{brief}}</text>
+    </view>
+
+    <view class='r-tool'>
+      {{like_count}} 赞 · {{read_count}} 评论 · {{read_count}} 浏览 
+      <text class='r-date'>{{created_at}}</text>
+    </view>
+  </view>
+</template>

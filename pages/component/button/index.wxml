@@ -1,0 +1,13 @@
+<button
+    class="btn-class btn {{ long ? 'btn-long' : '' }} {{ 'btn-' + size }} {{ 'btn-' + type }} {{ 'btn-' + shape }} {{ loading ? 'btn-loading' : '' }} {{ disabled ? 'btn-disabled' : ''}} {{ inline ? 'btn-inline' : '' }}"
+    hover-class="btn-hover"
+    bindtap="handleClick"
+    hover-stop-propagation="{{ hoverStopPropagation }}"
+    hover-start-time="{{ hoverStartTime }}"
+    hover-stay-time="{{ hoverStayTime }}"
+    plain="true" 
+    form-type='submit'
+>
+    <view class="btn-loading-inner" wx:if="{{loading}}"></view>
+    <slot></slot>
+</button>

@@ -1,0 +1,64 @@
+.load-more {
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color: #777;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+}
+
+.loading text {
+  display: inline-block;
+  padding: 0 4rpx;
+}
+
+.dot1, .dot2, .dot3 {
+  visibility: hidden;
+}
+
+.dot1 {
+  animation: dot1 1.6s linear infinite;
+}
+
+@keyframes dot1 {
+  0%, 40%, 100% {
+    visibility: hidden;
+  }
+
+  70% {
+    visibility: visible;
+  }
+}
+
+.dot2 {
+  animation: dot2 1.6s linear infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes dot2 {
+  0%, 40%, 87.5% {
+    visibility: hidden;
+  }
+
+  70% {
+    visibility: visible;
+  }
+}
+
+.dot3 {
+  animation: dot3 1.6s linear infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes dot3 {
+  0%, 40%, 75% {
+    visibility: hidden;
+  }
+
+  70% {
+    visibility: visible;
+  }
+}

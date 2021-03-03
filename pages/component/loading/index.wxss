@@ -1,0 +1,50 @@
+/* 加载动画 */
+
+.spinner {
+  margin: 0 auto;
+  height: 60rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+
+.spinner .item {
+  margin: 0 5rpx;
+  height: 24rpx;
+  width: 12rpx;
+  display: inline-block;
+}
+
+.item .rect {
+  height: 24rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  animation: stretchdelay 1s infinite;
+  transform: rotate(12deg);
+  opacity: 0;
+}
+
+.spinner .item .rect1 {
+  background: #f60;
+}
+
+.spinner .item .rect2 {
+  animation-delay: 0.2s;
+  background: #7fd901;
+}
+
+.spinner .item .rect3 {
+  animation-delay: 0.4s;
+  background: #36a2e0;
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    opacity: 0;
+    transform: rotate(12deg) scale(0.2, 0.2);
+  }
+
+  70% {
+    opacity: 1;
+    transform: rotate(12deg) scale(1, 1);
+  }
+}

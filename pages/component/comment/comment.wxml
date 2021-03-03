@@ -1,0 +1,37 @@
+<template name="commentTpl">
+
+  <view class='t_comment' catchtap='showTool'>
+
+    <view class='t_avatar-wrapper'>
+      <image class='t_avatar' src='{{author.avatar}}'></image>
+    </view>
+
+    <view class='t_main border_bottom'>
+      <view class='t_header'>
+        <view class='t_author'>
+          <text class='t_name'>{{author.username}}</text>
+          <text class='t_me' wx:if="{{author.id === uid}}">我</text>
+        </view>
+
+        <view style="">
+          <star style="" wx:if="{{rating}}" rate="{{rating}}"></star>
+        </view>
+        <!-- <view wx:else class='_stars_null'>用户未评分</view> -->
+      </view>
+
+      <view class='t_content'>
+        <text>{{content}}</text>
+      </view>
+      <view class='t_tool'>
+        <view class='t_date'>{{created_at}}</view>
+        <view class='t_upper {{liked ? "comment_liked":""}}' data-state="{{liked}}" data-idx="{{index}}" data-id="{{id}}" catchtap='doCommentLike'>
+          <text class='iconfont icon-upper'></text>
+          <text>{{like_count}}</text>
+        </view>
+        <view class='t_upper' data-id="{{id}}" catchtap='showSheet'>
+          <text class='iconfont icon-more'></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

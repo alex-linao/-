@@ -1,0 +1,54 @@
+/* 文章 */
+
+.article {
+  display: flex;
+  padding: 22rpx 0;
+}
+
+.article .a-content {
+  flex: 1;
+  padding-right: 36rpx;
+}
+
+.a-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 120rpx;
+  font-size: 15px;
+  color: #555;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.a-tool {
+  font-size: 12px;
+  color: #888;
+  line-height: 30rpx;
+  height: 30rpx;
+}
+
+.a-created_at {
+  padding-left: 6px;
+}
+
+.icon-see {
+  padding: 0 2px;
+  color: #888;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.article .a-poster {
+  padding: 5rpx 0;
+  width: 250rpx;
+  height: 150rpx;
+}
+
+.article .a-poster image {
+  width: 250rpx;
+  height: 150rpx;
+  border-radius: 6rpx;
+  background: #f7f7f7;
+}

@@ -1,0 +1,3 @@
+<cover-view class="toast" hidden="{{!isShow}}">
+	<cover-view class='title'>{{title}}</cover-view>
+</cover-view>

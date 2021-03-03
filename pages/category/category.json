@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "星辰影院",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

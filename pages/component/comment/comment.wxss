@@ -1,0 +1,24 @@
+
+.t_comment {display: flex;padding: 15rpx 25rpx;}
+.t_comment .border_bottom::before {background: #f0f0f0;}
+
+  .t_avatar-wrapper {width: 70rpx;}
+    .t_avatar {width: 25px;height: 25px;border-radius: 3px;background: #f7f7f7;}
+  .t_main {flex: 1;padding-bottom: 18rpx;}
+    .t_header {height: 24px;line-height: 24px;display: flex;}
+       .t_author {flex: 1;} 
+      .t_name {font-size: 14px;color: #333;font-weight: 700;}
+      .t_me {margin: 0 4px;padding: 0 3px;display: inline-block;color: #fff;font-size: 10px;border-radius: 4px;background: #FF7F00;height: 16px;line-height: 16px;}
+      
+    .t_content {font-size: 16px;padding: 8px 0 2px;line-height: 26px;color: #333;flex: 1;word-break:break-all;}
+    
+    .t_tool {padding: 6px 0 10px;color: #999;font-size: 12px;line-height: 18px;display: flex;}
+      .t_date {flex: 1;}
+      .t_upper {padding: 1px 3px;}
+      .icon-upper {font-size: 14px;padding-right: 4rpx;color: #333;}
+
+      .comment_liked, .comment_liked .iconfont {color: #eea907 !important;}
+
+  .t_comment:last-of-type  .border_bottom::before {display: none;}
+
+  .icon-more {font-size: 20px;}

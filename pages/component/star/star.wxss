@@ -1,0 +1,71 @@
+@import '/static/iconfont/iconfont.wxss';
+
+.rate-wapper {
+  display: inline;
+}
+
+.rate-item {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.rate-item text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c8c8c8;
+}
+
+.rate-item .check {
+  color: #fea54c !important;
+}
+
+.medium {
+  width: 46rpx;
+  line-height: 38rpx;
+}
+
+.medium .rate-item {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.medium .rate-item text {
+  width: 46rpx;
+  height: 46rpx;
+  font-size: 50rpx;
+}
+
+.small {
+  height: 30rpx;
+  line-height: 26rpx;
+}
+
+.small .rate-item {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.small .rate-item text {
+  font-size: 32rpx;
+}
+
+.mini {
+  height: 24rpx;
+  line-height: 12rpx;
+}
+
+.mini .rate-item {
+  margin-left: 1rpx;
+  width: 24rpx;
+  height: 24rpx;
+  font-size: 28rpx;
+}
+
+.mini .rate-item text {
+  width: 24rpx;
+  height: 24rpx;
+  font-size: 28rpx;
+}

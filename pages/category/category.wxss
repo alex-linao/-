@@ -1,0 +1,75 @@
+ @import "/pages/component/movie-item/movie-item.wxss";
+
+.nav-wrapper {padding: 10rpx 0 0 20rpx;}
+.nav {padding: 10rpx 0;width: 100%;height: 28px;white-space: nowrap;}
+.nav view {display: inline-block;padding: 0 10px;margin-right: 5px;line-height: 28px;font-size: 15px;color: #333;}
+.nav .chosen {color: #f16c00; background: #f8f8f8;border-radius: 2px;}
+
+.movie-wrapper {padding: 20rpx 0 20rpx 18rpx;}
+.movie-item {margin: 0 10rpx 50rpx;}
+.movie-poster {width: 220rpx;height: 308rpx;}
+.movie-poster .poster {width: 220rpx;height: 308rpx;}
+
+/* 加载动画 */
+.spinner {margin: 0 auto;height: 60rpx;line-height: 30rpx;text-align: center;}
+.spinner .item {margin: 0 5rpx;height: 24rpx;width: 12rpx;display: inline-block;}
+.spinner .item .rect {
+	height: 24rpx;width: 100%;border-radius: 10rpx;animation: stretchdelay 1s infinite;transform: rotate(12deg);opacity: 0;
+}
+
+.spinner .item .rect1 {background: #ff6600;}
+.spinner .item .rect2 {animation-delay: .2s;background: #7fd901;}
+.spinner .item .rect3 {animation-delay: .4s;background: #36a2e0;}
+@keyframes stretchdelay {
+	0%, 40%, 100% {
+    	opacity: 0;
+	  	transform: rotate(12deg) scale(.2, .2);
+	} 70% {
+    	opacity: 1;
+	  	transform: rotate(12deg) scale(1, 1);
+	}
+}
+.no-data {text-align: center;line-height: 30px;height: 30px;font-size: 12px;color: #999;}
+.nodata-icon {width: 200rpx;height: 200rpx;padding: 160rpx 0;}
+
+
+.fixed-nav {
+	margin: 30rpx 20rpx 20rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-list {
+  position: relative;
+  padding: 0 6rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 12px;
+  border-radius: 40px;
+  text-align: center;
+  background-color: #f7f0f8;
+}
+.nav-list .item {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  color: var(--color-theme-light);
+  width: 90rpx;
+  transition: color .2s;
+}
+
+.nav-list .item.is-active {
+  color: var(--color-theme);
+}
+
+.nav-list .active-block {
+  z-index: 0;
+  position: absolute;
+  left: 6rpx;
+  top: 6rpx;
+  width: 90rpx;
+  height: 48rpx;
+  border-radius: 40px;
+  background-color: #fff;
+  transition: left .2s;
+}

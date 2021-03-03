@@ -1,0 +1,72 @@
+@import '/static/iconfont/iconfont.wxss';
+
+.wrapper {
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+}
+.mask {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3); 
+}
+
+.info {
+  height: 85rpx;
+  line-height: 85rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  font-size: 14px;
+}
+.info .name {
+  color: #727272;
+}
+.info .size {
+  font-size: 16px;
+}
+
+/* 底部评论、点赞、收藏 等工具栏 样式 */
+
+.comment-bar {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 50vh;
+  background: #fff;
+  z-index: 999;
+  box-shadow: 0 0 1rpx #777;
+}
+
+.toolbar {
+  color: #999;
+  font-size: 12px;
+  padding: 0 30rpx;
+}
+
+.virtual_input {
+  font-size: 14px;
+  line-height: 40rpx;
+  height: auto;
+  transition: height .2s;
+}
+.tool-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 85rpx;
+  line-height: 85rpx;
+}
+.submit {
+  color: #b2dcfd;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}

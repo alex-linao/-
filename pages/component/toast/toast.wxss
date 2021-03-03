@@ -1,0 +1,31 @@
+.toast {
+  z-index: 9999;
+  position: fixed;
+  bottom: 110rpx;
+  text-align: center;
+  width: 100%;
+  animation: toast 0.25s ease-in-out;
+}
+
+.toast .title {
+  display: inline-block;
+  color: #fff;
+  padding: 22rpx 34rpx;
+  font-size: 13px;
+  border-radius: 4rpx;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes toast {
+  0% {
+    bottom: 40rpx;
+  }
+
+  60% {
+    bottom: 130rpx;
+  }
+
+  100% {
+    bottom: 110rpx;
+  }
+}

@@ -1,0 +1,6 @@
+<!-- 加载动画 -->
+<view class='spinner' hidden="{{!loading}}">
+  <view class='item'><view class='rect rect1'></view></view>
+  <view class='item'><view class='rect rect2'></view></view>
+  <view class='item'><view class='rect rect3'></view></view>
+</view>

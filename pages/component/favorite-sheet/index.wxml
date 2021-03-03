@@ -1,0 +1,33 @@
+<view hidden="{{!show}}" class='mask'></view>
+
+<view class='dialog' hidden="{{!show}}">
+  <view class='header border_bottom'>
+    <text class='iconfont icon-add' data-url="/pages/favorite/create" catchtap='handleNavigateTo'></text>
+    <text class='title'>我的收藏夹</text>
+    <text wx:if="{{!saveLoading}}" style='color: {{confirm ? "#FFA07A":"#ddd"}};' class='iconfont icon-confirm' catchtap="handleSave"></text>
+    <view wx:else class="save-loading"></view>
+  </view>
+
+  <view class='list'>
+    <view class='loading' wx:if="{{loading}}">
+      <loading loading="{{true}}"></loading>
+    </view>
+
+    <view wx:for="{{favorites}}" wx:key="{{item.id}}" class='item border_bottom'>
+      <view class='cover'>
+        <image class='image' src='{{item.cover}}'></image>
+      </view>
+      <view class='content'>
+        <view class='title'>{{item.name}}</view>
+        <view class='count'>{{item.count}}部</view>
+      </view>
+      <view class='check'>
+        <text data-index="{{index}}" catchtap='_handleCheck' class='iconfont icon-check' style='color: {{item.check ? "#FFA07A":"#ddd"}};'></text>
+      </view>
+    </view>
+
+    <loadmore wx:if="{{!loading}}" loadmore="{{true}}"></loadmore>
+
+  </view>
+  <view class='cancle-button border_top' catchtap="_hideModal">取消</view>
+</view>

@@ -1,0 +1,31 @@
+<view class="swipeout-wrap m-class">
+  <view class="swipeout" bindtouchstart="handleTouchstart" bindtouchmove="handleTouchmove" bindtouchend="handleTouchend" style="{{ parse.setPosition(position) }}">
+
+    <view class="swipeout-content">
+      <slot name="content"></slot>
+    </view>
+
+    <view wx:if="{{ actions.length }}" class="swipeout-button-group" catchtouchend="loop">
+      <view class="swipeout-button-item" wx:for="{{ actions }}" wx:key="index" data-index="{{ index }}" style="{{ parse.setStyle(item) }}; width:{{ item.width }}px;" bind:tap="handleButton">
+        <m-icon wx:if="{{ item.icon }}" icon="{{ item.icon }}" size="{{ item.size }}" color="{{ item.color }}">
+        </m-icon>
+        {{item.name}}
+      </view>
+    </view>
+
+    <view wx:else class="swipeout-button-group" catchtouchend="loop" bind:tap="handleParentButton" style="width:{{ operateWidth }}px; right:-{{ operateWidth }}px;">
+      <slot name="button"></slot>
+    </view>
+  </view>
+</view>
+<wxs module="parse">
+  module.exports = {
+    setStyle: function(item) {
+      var defaults = '#f7f7f7';
+      return 'background:' + (item.background ? item.background : defaults) + ';' + 'color:' + item.color;
+    },
+    setPosition: function(position) {
+      return 'transform:translate(' + position.pageX + 'px,0);';
+    }
+  }
+</wxs>

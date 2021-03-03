@@ -1,0 +1,15 @@
+<template name="articleTpl">
+  <view class='article border_bottom' catchtap='navigateTo' data-type="article" data-id='{{id}}'>
+    <view class='a-content'>
+      <view class='a-title'>{{title}}</view>
+      <view class='a-tool'>
+        <text>{{author.name}}</text>
+        <text class='a-created_at'>{{created_at}}</text>
+        <text class='_right'>{{read_count}} 浏览</text>
+      </view>
+    </view>
+    <view class='a-poster'>
+      <image mode='aspectFill' src='{{cover}}'></image>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,9 @@
+<view>
+	<view class="load-more" hidden="{{ !loadmore }}">没有更多数据了</view>
+	<view class="load-more loading" hidden="{{ loadmore }}">
+		<text>加载中</text>
+		<text class="dot1">.</text>
+		<text class="dot2">.</text>
+		<text class="dot3">.</text>
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<view class="rate-wapper">
+    <view wx:for="{{rateList}}" wx:key="item" class="rate-star">
+        <view class='rate-inner {{"scale_" + index}}'>
+        	<view class='rate-item {{actived === index ? "actived" : ""}}'>
+	            <text class='iconfont icon-save all {{(index*2) + 1 < rate ? "check" : ""}}' data-index="{{index*2 + 2}}" bindtap="handleClick"></text>
+	            <text class='absolute iconfont icon-save half {{index*2 < rate ? "check" : ""}}' data-index="{{index*2 + 1}}" bindtap="handleClick"></text>
+	        </view>
+        </view>
+        <view class='title {{(rate === index  * 2  + 1 || rate === index * 2 + 2) ? "check" : ""}}'>{{item}}</view>
+    </view>
+</view>

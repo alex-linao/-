@@ -1,0 +1,6 @@
+<view class="rate-wapper {{size}}">
+  <view wx:for="{{5}}" wx:key="item" class='rate-item'>
+    <text class='iconfont icon-save {{index + 1 <= fullCount ? "check" : ""}}'></text>
+    <text wx:if="{{index === fullCount && percent > 0}}" class='iconfont icon-save check' style="overflow: hidden;width: {{percent}}%"></text>
+  </view>
+</view>

@@ -1,0 +1,124 @@
+<view class="main">
+    <!-- <MyTitle>111</MyTitle> -->
+    <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" name="serch" class="weui-search-bar__input" bindinput="getval" placeholder="请输入搜索内容"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='a'>搜索</view>
+        </view>
+    </view>
+    <view class="nav_wrap">
+        <scroll-view class="nav" scroll-x="{{true}}">
+            <view bindtap="activeNav" data-index="{{index}}"
+             class="nav_item {{index===currentIndexNav?'active':''}}"
+              wx:for="{{navList}}" wx:key="index">
+                {{item.text}}
+            </view>
+        </scroll-view>
+    </view>
+    <view class="slides">
+        <swiper autoplay="{{true}}"  indicator-dots="{{true}}" circular="{{true}}">
+            <swiper-item wx:for="{{swiperList}}" wx:key="index">
+                <navigator >
+                    <image mode="widthFix" src="{{item.vod_pic}}"></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    
+    <view class="video_wrap">
+    <label>{{videotype[0].type_name}}</label>
+    </view>
+    <view class="video_wrap">
+        <navigator url="../detail/detail?id={{item.vod_id}}" class="video_item" wx:for="{{videosList}}" wx:key="index">
+            <view class="video_img">
+                <image mode="widthFix" src="{{item.vod_pic}}"></image>
+                <view class="video_info">
+                    <view class="play_count_wrap">
+                        <text class="fa fa-play-circle-o"></text>
+                        <text class="play_count">{{item.playCount}}</text>
+                    </view>
+                    <view class="comment_count_row">
+                        <text class="fa fa-commenting-o"></text>
+                        <text class="comment_count">{{item.commentCount}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="video_title">{{item.vod_name}}</view>
+        </navigator>
+    </view>
+
+    <view class="video_wrap">
+    <label>{{videotype[1].type_name}}</label>
+    </view>
+    <view class="video_wrap">
+        <navigator url="../detail/detail?id={{item.vod_id}}" class="video_item" wx:for="{{videosList2}}" wx:key="index">
+            <view class="video_img">
+                <image mode="widthFix" src="{{item.vod_pic}}"></image>
+                <view class="video_info">
+                    <view class="play_count_wrap">
+                        <text class="fa fa-play-circle-o"></text>
+                        <text class="play_count">{{item.playCount}}</text>
+                    </view>
+                    <view class="comment_count_row">
+                        <text class="fa fa-commenting-o"></text>
+                        <text class="comment_count">{{item.commentCount}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="video_title">{{item.vod_name}}</view>
+        </navigator>
+    </view>
+
+    <view class="video_wrap">
+    <label>{{videotype[2].type_name}}</label>
+    </view>
+    <view class="video_wrap">
+        <navigator url="../detail/detail?id={{item.vod_id}}" class="video_item" wx:for="{{videosList3}}" wx:key="index">
+            <view class="video_img">
+                <image mode="widthFix" src="{{item.vod_pic}}"></image>
+                <view class="video_info">
+                    <view class="play_count_wrap">
+                        <text class="fa fa-play-circle-o"></text>
+                        <text class="play_count">{{item.playCount}}</text>
+                    </view>
+                    <view class="comment_count_row">
+                        <text class="fa fa-commenting-o"></text>
+                        <text class="comment_count">{{item.commentCount}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="video_title">{{item.vod_name}}</view>
+        </navigator>
+    </view>
+
+    <view class="video_wrap">
+    <label>{{videotype[3].type_name}}</label>
+    </view>
+    <view class="video_wrap">
+        <navigator url="../detail/detail?id={{item.vod_id}}" class="video_item" wx:for="{{videosList4}}" wx:key="index">
+            <view class="video_img">
+                <image mode="widthFix" src="{{item.vod_pic}}"></image>
+                <view class="video_info">
+                    <view class="play_count_wrap">
+                        <text class="fa fa-play-circle-o"></text>
+                        <text class="play_count">{{item.playCount}}</text>
+                    </view>
+                    <view class="comment_count_row">
+                        <text class="fa fa-commenting-o"></text>
+                        <text class="comment_count">{{item.commentCount}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="video_title">{{item.vod_name}}</view>
+        </navigator>
+    </view>
+
+    
+</view>
